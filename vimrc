@@ -1,7 +1,11 @@
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+execute pathogen#infect()
+execute pathogen#helptags()
 
 set hidden
 set number
 syntax on
-color dracula
+colorscheme dracula
+
+if has("autocmd")
+  filetype plugin indent on
+endif
